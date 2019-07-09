@@ -1,9 +1,11 @@
 version: '3.4'
 services:
     app:
-        network_mode: "none"
         build:
             target: build
             context: ./
         image: testimage
    
+networks:
+  default: 
+    external: true
